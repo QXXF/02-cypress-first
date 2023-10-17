@@ -3,7 +3,7 @@ import './TaskList.css';
 
 function TaskList({ tasks }) {
   if (!tasks || tasks.length === 0) {
-    return <p className="no-tasks">Nessuna task trovata :(</p>;
+    return <p className="no-tasks">Nessun To-Do trovato :(</p>;
   }
 
   return (
