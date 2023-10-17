@@ -58,7 +58,7 @@ function NewTask({ onAddTask, onCancel }) {
       )}
       <p className="actions">
         <button type="button" onClick={onCancel}>Cancella</button>
-        <button type="submit">Aggiungi una To-Do</button>
+        <button type="submit">Aggiungi To-Do</button>
       </p>
     </form>
   );
