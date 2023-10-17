@@ -4,8 +4,7 @@ describe('Pagina delle task', () => {
 
   it(`visualizza l'immagine principale`, () => {
     cy.visit('http://localhost:5173/')
-    // cy.get('.main-header img')
-    cy.find('.main-header').find('img')
+    cy.get('.main-header img')
   })
 
   it(`visualizza il titolo della pagina principale`, () => {
