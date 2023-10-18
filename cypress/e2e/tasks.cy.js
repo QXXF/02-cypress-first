@@ -9,9 +9,12 @@ const checkVisiblity = (visible = true) => {
 }
 
 describe('gestione delle task', () => {
+
+    beforeEach(() => {
+        cy.visit('/')
+    })
+
     it('apri e chiudi la modale task', () => {
-        // Visitiamo la root del progetto
-        cy.visit('http://localhost:5173/')
 
         // Apriamo la modale
         cy.contains('Aggiungi To-Do').click()
@@ -31,8 +34,6 @@ describe('gestione delle task', () => {
     })
 
     it('inserisci un nuovo task', ()=>{
-        // Visitiamo la root del progetto
-        cy.visit('http://localhost:5173/')
 
         // - Aprire la modale
         cy.contains('Aggiungi To-Do').click()
@@ -55,8 +56,6 @@ describe('gestione delle task', () => {
     })
 
     it('verifica la validazione del form', () => {
-        // Visitiamo la root del progetto
-        cy.visit('http://localhost:5173/')
 
         // - Aprire la modale
         cy.contains('Aggiungi To-Do').click()
@@ -70,9 +69,6 @@ describe('gestione delle task', () => {
     })
 
     it('verifica il funzionamento del filtro categoria', () => {
-
-        // Visitiamo la root del progetto
-        cy.visit('http://localhost:5173/')
 
         // Aprire la modale
         cy.contains('Aggiungi To-Do').click()
@@ -113,7 +109,6 @@ describe('gestione delle task', () => {
     })
 
     it('aggiunti task multiple', () => {
-        cy.visit('http://localhost:5173/')
 
         // Primo elemento
         cy.contains('Aggiungi To-Do').click()
